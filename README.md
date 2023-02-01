@@ -1,8 +1,7 @@
 # hyperledger-fabric-chaincode
 smartcontract chaincode to deploy on hyperledger fabric blockchain
 
-The directions for using this sample are documented in the Hyperledger Fabric
-[Writing Your First Application](https://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html) tutorial.
+The directions for using this sample are documented in the Hyperledger Fabric tutorial [Refer link](https://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html).
 
 The tutorial is based on JavaScript, however the same concepts are applicable when using Java.
 
@@ -63,6 +62,14 @@ ____
 ```
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${FPWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n fabcar --peerAddresses localhost:7051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"initializeItemWithInventoryAndThreshold","Args":["HANDBAG","5","1"]}'
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${FPWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n fabcar --peerAddresses localhost:7051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"getInventoryHistory","Args":["HANDBAG"]}'
+```
+
+```bash
+deployChaincode
+loadItemTxn
+recordSales
+audit
+getCurrentState
 ```
 
 *NOTE:* After navigating to the documentation, choose the documentation version that matches your version of Fabric
