@@ -2,8 +2,13 @@
 smartcode to deploy on hyperledger fabric blockchain
 
 
-```bash
+
+#### bringing up the test network
+
+```git
 cd ~/fabric-samples/test-network
+
+```bash
 ./network.sh down
 ./network.sh up
 
