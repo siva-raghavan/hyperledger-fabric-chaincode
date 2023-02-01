@@ -37,3 +37,17 @@ export FABRIC_CFG_PATH=${FPWD}/../config
 export CORE_PEER_ADDRESS=127.0.0.1:7051
 ```
 ____
+
+### Deploy chaincode to network (with/without sequence specified)
+
+```bash
+./network.sh deployCC -ccn fabcar -ccp ../chaincode/fabcar/java -c mychannel -ccl java
+./network.sh deployCC -ccn fabcar -ccs 9 -ccp ../chaincode/fabcar/java -c mychannel -ccl java
+```
+
+### Invoke chaincode
+
+```
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${FPWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n fabcar --peerAddresses localhost:7051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"initializeItemWithInventoryAndThreshold","Args":["HANDBAG","5","1"]}'
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${FPWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n fabcar --peerAddresses localhost:7051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${FPWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"getInventoryHistory","Args":["HANDBAG"]}'
+```
