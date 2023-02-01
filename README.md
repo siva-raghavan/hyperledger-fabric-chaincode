@@ -68,6 +68,7 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 deployChaincode
 loadItemTxn
 recordSales
+recordSales refillInventory
 audit getInventoryHistory
 audit getThresholdHistory
 audit getReplenStateHistory
