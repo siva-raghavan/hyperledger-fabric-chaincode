@@ -74,6 +74,8 @@ audit getReplenStateHistory
 getCurrentState currentQty
 getCurrentState currentThreshold
 getCurrentState replenState
+getCurrentState approveReplenishment
+getCurrentState holdReplenishment
 ```
 
 *NOTE:* After navigating to the documentation, choose the documentation version that matches your version of Fabric
