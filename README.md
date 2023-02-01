@@ -7,8 +7,9 @@ smartcode to deploy on hyperledger fabric blockchain
 
 ```git
 cd ~/fabric-samples/test-network
+```
 
 ```bash
 ./network.sh down
 ./network.sh up
-
+```
