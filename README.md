@@ -1,5 +1,5 @@
 # hyperledger-fabric-chaincode
-smartcode to deploy on hyperledger fabric blockchain
+smartcontract chaincode to deploy on hyperledger fabric blockchain
 
 
 ```git
