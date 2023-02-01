@@ -23,7 +23,7 @@ docker inspect <container_name>
 docker exec -it <container_name> - bash
 ```
 
-> Environment variables
+> 
 export CORE_PEER_TLS_ENABLED=true
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=${FPWD}/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
