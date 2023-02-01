@@ -45,6 +45,12 @@ export CORE_PEER_ADDRESS=127.0.0.1:7051
 ```
 ____
 
+### create channel
+
+```bash
+./network.sh createChannel
+```
+
 ### Deploy chaincode to network (with/without sequence specified)
 
 ```bash
