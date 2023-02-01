@@ -23,7 +23,7 @@ docker inspect <container_name>
 docker exec -it <container_name> - bash
 ```
 
-Environment Variables
+#### Environment Variables
 ____
 
 > export CORE_PEER_TLS_ENABLED=true
@@ -34,3 +34,4 @@ export CORE_PEER_ADDRESS=localhost:7051
 export PATH=${FPWD}/../bin:$PATH
 export FABRIC_CFG_PATH=${FPWD}/../config
 export CORE_PEER_ADDRESS=127.0.0.1:7051
+____
