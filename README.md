@@ -68,15 +68,15 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 deployChaincode
 loadItemTxn
 recordSales
-recordSales refillInventory
 audit getInventoryHistory
 audit getThresholdHistory
 audit getReplenStateHistory
 getCurrentState currentQty
 getCurrentState currentThreshold
 getCurrentState replenState
-getCurrentState approveReplenishment
-getCurrentState holdReplenishment
+refillAprroval approveReplenishment
+refillAprroval holdReplenishment
+refillInventory
 ```
 
 *NOTE:* After navigating to the documentation, choose the documentation version that matches your version of Fabric
